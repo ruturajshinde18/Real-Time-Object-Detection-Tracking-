@@ -6,14 +6,6 @@ A Python application that detects and tracks objects (people, vehicles) in video
 
 Detect and track multiple objects across video frames in real-time, maintaining persistent identities and measuring detection accuracy.
 
-## Approach
-
-| Component | Technology | Purpose |
-|-----------|------------|---------|
-| Detection | YOLOv8n (Ultralytics) | Fast, lightweight object detection |
-| Tracking | ByteTrack | Persistent ID assignment across frames |
-| Video Processing | OpenCV | Frame reading, resizing, FPS control |
-| Evaluation | Custom IoU-based | Precision, Recall, F1, FPS measurement |
 
 **Target Classes**: Person, Bicycle, Car, Motorcycle
 
@@ -38,7 +30,7 @@ python src/detect.py --video data/sample.mp4 --output output.mp4
 python src/detect.py --video data/sample.mp4 --no-track
 ```
 
-### Advanced Tracking with Trails
+### Tracking with Trails
 
 ```bash
 # Full tracking with movement trails
@@ -84,17 +76,3 @@ cv-object-detection-tracking/
 └── README.md
 ```
 
-## Key Learnings
-
-1. **ByteTrack > DeepSORT** for real-time applications - simpler and faster
-2. **YOLOv8n** balances speed and accuracy well for CPU/GPU
-3. **Frame resizing** significantly improves FPS without major accuracy loss
-4. **IoU threshold of 0.5** is standard for detection evaluation
-5. **Ultralytics tracking API** handles ByteTrack integration natively
-
-## Performance Notes
-
-- YOLOv8n achieves ~30+ FPS on CPU, 100+ FPS on GPU
-- Tracking adds minimal overhead (~5%)
-- 640px width provides good balance of speed and accuracy
-# Real-Time-Object-Detection-Tracking-
