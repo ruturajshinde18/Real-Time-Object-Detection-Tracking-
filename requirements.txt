@@ -1,0 +1,5 @@
+# Core dependencies
+ultralytics>=8.0.0    # YOLOv8 with built-in ByteTrack
+opencv-python>=4.8.0  # Video processing
+numpy>=1.24.0         # Array operations
+lapx>=0.5.0           # ByteTrack linear assignment

@@ -1,0 +1,8 @@
+{
+  "total_frames": 115,
+  "total_predictions": 20,
+  "total_ground_truths": 0,
+  "avg_fps": 44.133390340401625,
+  "min_fps": 25.468027615687753,
+  "max_fps": 45.76885891686036
+}
